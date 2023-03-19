@@ -2,7 +2,16 @@
 
 // font-family: 'Josefin Sans', sans-serif;
 @import 'vendors/normalize';
-@import 'base/basic';
 @import 'base/colors';
-@import 'base/components';
+@import 'base/typography';
+@import 'base/basic';
 
+@import 'base/components';
+@import 'base/mixin';
+
+@import 'layouts/header';
+@import 'layouts/hero';
+@import 'layouts/information';
+@import 'layouts/storytelling';
+@import 'layouts/menu';
+@import 'layouts/testimonial';

@@ -1,0 +1,62 @@
+.testimonial {
+    color: $clr-white;
+    font-weight: $fw-light;
+    padding-block: 3em;
+
+    &>h3,
+    h4 {
+        color: inherit;
+    }
+
+    &__heading>h2 {
+        color: inherit;
+    }
+
+    &-bg {
+        background-color: $clr-secondary;
+    }
+
+
+    &__card {
+        padding: 1em;
+        background-color: $clr-gray-darker;
+        margin-bottom: 1em;
+    }
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $clr-gray-dark;
+    margin-bottom: 2em;
+
+    &__photo {
+        position: relative;
+        margin-right: 1em;
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url(./../assets/icons/quotes.png);
+        }
+    }
+
+    &__name > span {
+        color: $clr-primary;
+    }
+}
+
+@media (min-width: 1000px) {
+    
+    .testimonial {
+
+        &__block {
+            display: flex;
+        }
+    }
+}

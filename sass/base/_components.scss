@@ -1,0 +1,52 @@
+.btn {
+    text-align: center;
+    font-size: $fs-btn;
+    line-height: 1.4;
+    border: none;
+    outline: 3px solid $clr-primary;
+    cursor: pointer;
+    padding: 0.5em 0;
+    width: calc(230px + 2vw);
+    background-color: transparent;
+    transition: all 200ms ease-in;
+
+    &--border {
+        color: $clr-primary;
+
+        &:hover {
+            color: $clr-black;
+            outline-offset: -5px;
+            background-color: darken($clr-primary, 15%);
+        }
+    }
+
+    &--color {
+        color: $clr-black;
+        background-color: $clr-primary;
+
+        &:hover {
+            outline-offset: -5px;
+            background-color: darken($clr-primary, 15%);
+        }
+    }
+}
+
+
+
+.section-heading {
+    margin-bottom: 2em;
+
+    &__title {
+        display: inline-block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        border-block: 2px solid $clr-primary;
+        padding-block: 0.5em 0.2em;
+        margin-bottom: 1em;
+    }
+
+    & > p {
+        line-height: 1.3;
+    }
+}

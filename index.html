@@ -16,16 +16,16 @@
 
 <body>
 
-    <header class="header">
-        <div class="container header__content">
-            <div class="header__info">
-                <div class="btn btn--border">
-                    <a href="tel:+123456789">Call - 123 456 789</a>
+    <header class="header-bg">
+        <div class="container header">
+            <div class="header__info info">
+                <div class="info__telefon">
+                    <a href="tel:+123456789" class="btn btn--border">Call - 123 456 789</a>
                 </div>
-                <div class="logo">
+                <div class="info__logo">
                     <img src="./assets/icons/logo.png" alt="The Tasteat logo" class="logo-img">
                 </div>
-                <div class="header__btn">
+                <div class="info__btn">
                     <button class="btn btn--color">Reservation</button>
                 </div>
             </div>
@@ -54,8 +54,8 @@
 
 
 
-    <section class="hero">
-        <div class="container hero__content">
+    <section class="hero-bg">
+        <div class="container hero">
             <div class="hero__text">
                 <h1 class="hero__title">Welcome to Restaurant</h1>
                 <p>The people, food and the prime locations make the perfect place good friends & family to come
@@ -74,19 +74,32 @@
 
 
 
-    <section class="information">
-        <div class="container information__content">
+    <section class="information-bg">
+        <div class="container information">
             <div class="information__block">
-                <h3>Locate Us</h3>
-                <a href="https://goo.gl/maps/dAXusTSXBEw541JV8">Riverside 25, San Diego, California</a>
+                <div class="information__icon">
+                    <img src="./assets/icons/locate-point.png" alt="local point">
+                </div>
+                <h4>Locate Us</h4>
+                <span>
+                    <a href="https://goo.gl/maps/dAXusTSXBEw541JV8">Riverside 25, San Diego, California</a>
+                </span>
             </div>
             <div class="information__block">
-                <h3>Open Hours</h3>
+                <div class="information__icon">
+                    <img src="./assets/icons/open-time.png" alt="open time">
+                </div>
+                <h4>Open Hours</h4>
                 <span>Mon To Fri 9:00 AM - 9:00 PM</span>
             </div>
             <div class="information__block">
-                <h3>Reservation</h3>
-                <a href="mailto:restaurantate@gmail.com">restaurantate@gmail.com</a>
+                <div class="information__icon">
+                    <img src="./assets/icons/reservation.png" alt="reservation">
+                </div>
+                <h4>Reservation</h4>
+                <span>
+                    <a href="mailto:restaurantate@gmail.com">rest@gmail.com</a>
+                </span>
             </div>
         </div>
     </section>
@@ -94,8 +107,8 @@
 
 
 
-    <section class="storytelling">
-        <div class="container storytelling__content">
+    <section class="storytelling-bg">
+        <div class="container storytelling">
             <div class="storytelling__img">
                 <img src="./assets/images/storytelling-img.jpg" alt="tables in restaurant">
             </div>
@@ -113,7 +126,6 @@
                 </div>
 
                 <div class="storytelling__autograph">
-                    <span>Josefine</span>
                     <img src="./assets/icons/autograph.png" alt="autograph">
                 </div>
             </div>
@@ -124,15 +136,15 @@
 
     <section class="menu-bg">
         <div class="container menu">
-            <div class="menu__card">
-                <div class="section-heading menu__heading">
-                    <span class="accent-title">Menu</span>
+            <div class="menu__card card">
+                <div class="section-heading card__heading">
+                    <span class="section-heading__title">Menu</span>
                     <h2>Try Our Special dishes</h2>
                     <p>Every time you perfectly dine with us, it should happy for great inspired food in an environment
                         designed with individual touches unique to the local area.</p>
                 </div>
-                <img src="./assets/images/menu-img.jpg" alt="apricot pie">
-                <div class="menu__btn">
+                <img src="./assets/images/menu-img.jpg" class="card__img" alt="apricot pie">
+                <div class="card__btn">
                     <button class="btn btn--border">See all dishes</button>
                 </div>
             </div>
@@ -140,58 +152,76 @@
             <div class="menu__gallery">
                 <div class="menu__category">
                     <h3>Starters</h3>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-starters-01.png" alt="Raw Scallops from Erquy">
-                        <h4>Raw Scallops from Erquy</h4>
-                        <p>Shuck the scallop to that used for oysters</p>
-                        <span>$40</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-starters-01.png" class="item__img" alt="Raw Scallops from Erquy">
+                        <div class="item__title">
+                            <h4>Raw Scallops from Erquy</h4>
+                            <p>Shuck the scallop to that used for oysters</p>
+                            <span class="item__price">$40</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-starters-02.png" alt="Spring Roll">
-                        <h4>Spring Roll</h4>
-                        <p>Add oil to a hot pan spring onion whites</p>
-                        <span>$20</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-starters-02.png" class="item__img" alt="Spring Roll">
+                        <div class="item__title">
+                            <h4>Spring Roll</h4>
+                            <p>Add oil to a hot pan spring onion whites</p>
+                            <span class="item__price">$20</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-starters-03.png" alt="French Onion Soup">
-                        <h4>French Onion Soup</h4>
-                        <p>Wheat flour, apple cider vinegar, bread</p>
-                        <span>$25</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-starters-03.png" class="item__img" alt="French Onion Soup">
+                        <div class="item__title">
+                            <h4>French Onion Soup</h4>
+                            <p>Wheat flour, apple cider vinegar, bread</p>
+                            <span class="item__price">$25</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-starters-04.png" alt="Tomato Bruschetta">
-                        <h4>Tomato Bruschetta</h4>
-                        <p>Bread, olive oil, garlic, black pepper</p>
-                        <span>$40</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-starters-04.png" class="item__img" alt="Tomato Bruschetta">
+                        <div class="item__title">
+                            <h4>Tomato Bruschetta</h4>
+                            <p>Bread, olive oil, garlic, black pepper</p>
+                            <span class="item__price">$40</span>
+                        </div>
                     </div>
                 </div>
 
 
                 <div class="menu__category">
                     <h3>Main Dish</h3>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-main-01.png" alt="Grilled Salmon with Dill Sauce">
-                        <h4>Grilled Salmon with Dill Sauce</h4>
-                        <p>Brown sugar, salmon fillet, Dijon mustard</p>
-                        <span>$40</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-main-01.png" class="item__img"
+                            alt="Grilled Salmon with Dill Sauce">
+                        <div class="item__title">
+                            <h4>Grilled Salmon with Dill Sauce</h4>
+                            <p>Brown sugar, salmon fillet, Dijon mustard</p>
+                            <span class="item__price">$40</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-main-02.png" alt="Roast Beef with Vegetable">
-                        <h4>Roast Beef with Vegetable</h4>
-                        <p>Green beans, rib eye, olive oil, beef</p>
-                        <span>$20</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-main-02.png" class="item__img" alt="Roast Beef with Vegetable">
+                        <div class="item__title">
+                            <h4>Roast Beef with Vegetable</h4>
+                            <p>Green beans, rib eye, olive oil, beef</p>
+                            <span class="item__price">$20</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-main-03.png" alt="Marrkesh Vegetetarian Curruy">
-                        <h4>Marrkesh Vegetetarian Curruy</h4>
-                        <p>Sweet potato, eggplant, garbanzo bean</p>
-                        <span>$25</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-main-03.png" class="item__img"
+                            alt="Marrkesh Vegetetarian Curruy">
+                        <div class="item__title">
+                            <h4>Marrkesh Vegetetarian Curruy</h4>
+                            <p>Sweet potato, eggplant, garbanzo bean</p>
+                            <span class="item__price">$25</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-main-04.png" alt="Spicy Vegan Potato Curry">
-                        <h4>Spicy Vegan Potato Curry</h4>
-                        <p>Coconut milk, beans, potatoes, curry powder</p>
-                        <span>$35</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-main-04.png" class="item__img" alt="Spicy Vegan Potato Curry">
+                        <div class="item__title">
+                            <h4>Spicy Vegan Potato Curry</h4>
+                            <p>Coconut milk, beans, potatoes, curry powder</p>
+                            <span class="item__price">$35</span>
+                        </div>
                     </div>
                 </div>
 
@@ -199,17 +229,21 @@
 
                 <div class="menu__category">
                     <h3>Dessert</h3>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-dessert-01.png" alt="Apple Pie with Cream">
-                        <h4>Apple Pie with Cream</h4>
-                        <p>Whipping cream, egg white, cinnamon</p>
-                        <span>$15</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-dessert-01.png" class="item__img" alt="Apple Pie with Cream">
+                        <div class="item__title">
+                            <h4>Apple Pie with Cream</h4>
+                            <p>Whipping cream, egg white, cinnamon</p>
+                            <span class="item__price">$15</span>
+                        </div>
                     </div>
-                    <div class="menu__item">
-                        <img src="./assets/images/menu-dessert-02.png" alt="Lemon Meringue Pie">
-                        <h4>Lemon Meringue Pie</h4>
-                        <p>Frozen pie crust, meringue, lemon</p>
-                        <span>$30</span>
+                    <div class="menu__item item">
+                        <img src="./assets/images/menu-dessert-02.png" class="item__img" alt="Lemon Meringue Pie">
+                        <div class="item__title">
+                            <h4>Lemon Meringue Pie</h4>
+                            <p>Frozen pie crust, meringue, lemon</p>
+                            <span class="item__price">$30</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,7 +254,7 @@
     <section class="testimonial-bg">
         <div class="container testimonial">
             <div class="section-heading testimonial__heading">
-                <span class="accent-title">Testimonial</span>
+                <span class="section-heading__title">Testimonial</span>
                 <h2>Our clients say</h2>
                 <p>We love to hear from customers, so please leave a comment or say hello in an email.</p>
             </div>
@@ -228,9 +262,13 @@
             <div class="testimonial__block">
                 <div class="testimonial__card">
                     <div class="testimonial__autor autor">
-                        <img src="./assets/images/testimonial-autor-01.png" alt="Natasha D photo" class="autor__img">
-                        <h4 class="autor__name">Natasha D</h4>
-                        <span class="autor__place">Newyork</span>
+                        <div class="autor__photo">
+                            <img src="./assets/images/testimonial-autor-01.png" alt="Natasha D photo">
+                        </div>
+                        <div class="autor__name">
+                            <h4>Natasha D</h4>
+                            <span>Newyork</span>
+                        </div>
                     </div>
                     <div class="testimonial__text">
                         <p>
@@ -243,9 +281,13 @@
 
                 <div class="testimonial__card">
                     <div class="testimonial__autor autor">
-                        <img src="./assets/images/testimonial-autor-02.png" alt="Jack Sparrow photo" class="autor__img">
-                        <h4 class="autor__name">Jack Sparrow</h4>
-                        <span class="autor__place">Salt Lake City</span>
+                        <div class="autor__photo">
+                            <img src="./assets/images/testimonial-autor-02.png" alt="Jack Sparrow photo">
+                        </div>
+                        <div class="autor__name">
+                            <h4>Jack Sparrow</h4>
+                            <span>Salt Lake City</span>
+                        </div>
                     </div>
                     <div class="testimonial__text">
                         <p>
@@ -258,9 +300,13 @@
 
                 <div class="testimonial__card">
                     <div class="testimonial__autor autor">
-                        <img src="./assets/images/testimonial-autor-03.png" alt="Martin photo" class="autor__img">
-                        <h4 class="autor__name">Martin</h4>
-                        <span class="autor__place">San Diego</span>
+                        <div class="autor__photo">
+                            <img src="./assets/images/testimonial-autor-03.png" alt="Martin photo">
+                        </div>
+                        <div class="autor__name">
+                            <h4>Martin</h4>
+                            <span>San Diego</span>
+                        </div>
                     </div>
                     <div class="testimonial__text">
                         <p>
@@ -270,10 +316,8 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial__bg-img">
-                <img src="./assets/images/testimonial-img.jpg" alt="cozy lights">
-            </div>
         </div>
+        <img src="./assets/images/testimonial-img.jpg" alt="cozy lights">
     </section>
 
 
@@ -281,7 +325,7 @@
     <section class="offers-bg">
         <div class="container offers">
             <div class="section-heading offers__heading">
-                <span class="accent-title">Offers</span>
+                <span class="section-heading__title">Offers</span>
                 <h2>Our Offer dishes</h2>
                 <p>Our chefs create melt-in-your-mouth dishes that'll satiate even the fussiest eaters now the dishes
                     are in
@@ -327,7 +371,7 @@
     <section class="gallery-bg">
         <div class="container gallery">
             <div class="section-heading gallery__heading">
-                <span class="accent-title">Galery</span>
+                <span class="section-heading__title">Galery</span>
                 <h2>Popular Dishes</h2>
                 <p>There is a game between the waiters in restaurant to see who serves the food to each table fastest.
                     That led to attempting the Guinness Record.</p>
@@ -374,7 +418,7 @@
     <section class="advantages-bg">
         <div class="container advantages">
             <div class="section-heading advantages__heading">
-                <span class="accent-title">What we offer</span>
+                <span class="section-heading__title">What we offer</span>
                 <h2>Our Great Services</h2>
                 <p>The atmosphere set the stage. It’s about more than just a dining room away from your home. Food takes
                     the spotlight as guests.</p>
@@ -401,7 +445,7 @@
     <section class="blog-bg">
         <div class="container blog">
             <div class="section-heading blog__heading">
-                <span class="accent-title">Blog</span>
+                <span class="section-heading__title">Blog</span>
                 <h2>Be First Who Read News</h2>
                 <p>Explore the latest stories about our dishes, offers, events and future plans here.</p>
             </div>
@@ -447,7 +491,7 @@
     <section class="reservation-bg">
         <div class="container">
             <div class="reservation">
-                <span class="accent-title">reservation</span>
+                <span class="section-heading__title">Reservation</span>
                 <form action="#">
                     <legend>Book Your Table</legend>
                     <input type="text" name="text" id="#" placeholder="Name">
@@ -476,10 +520,10 @@
 
 
 
-    <footer>
-        <div class="container footer">
+    <footer class="footer">
+        <div class="container">
             <div class="contact">
-                <span class="accent-title">Contact</span>
+                <span class="section-heading__title">Contact</span>
                 <ul class="contact__list">
                     <li><a href="https://goo.gl/maps/LXrqbjUSoqokkDgF8">5 Rue Dalou, 75015 Paris</a></li>
                     <li><a href="tel:+123456789">+123 456 789</a></li>

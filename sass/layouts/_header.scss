@@ -1,0 +1,44 @@
+.header {
+    text-align: center;
+    padding-block: 2em;
+
+    &-bg {
+        background-color: $clr-secondary;
+        border-bottom: 2px solid $clr-gray-dark;
+    }
+
+    &__nav {
+        display: none;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+
+    &>* {
+        margin-bottom: 1em;
+    }
+
+    &__logo {
+        order: -1;
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        &>* {
+            margin: 0;
+        }
+    
+        &__logo {
+            order: 0;
+        }
+    }
+}

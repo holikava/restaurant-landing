@@ -1,0 +1,38 @@
+.information {
+    display: grid;
+    gap: 2em;
+    grid-auto-flow: row;
+    padding-block: 3em;
+
+    &-bg {
+        background-color: $clr-pink-light;
+    }
+
+    &__icon {
+        display: flex;
+        width: 83px;
+        height: 83px;
+        border-radius: 50%;
+        background-color: $clr-secondary;
+        margin: 0 auto 0.7em;
+
+        & > img {
+            margin: auto;
+        }
+    }
+
+    &__block {
+        text-align: center;
+
+        & > span {
+            font-weight: $fw-light;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .information {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}

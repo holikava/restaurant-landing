@@ -1,0 +1,61 @@
+.storytelling {
+    display: flex;
+    flex-direction: column;
+    padding-block: 3em;
+
+    &-bg {
+        background-color: $clr-pink-light;
+    }
+
+    &__img {
+        margin-bottom: 1em;
+    }
+
+    &__text {
+
+        &>p {
+            margin-bottom: 1em;
+        }
+    }
+
+    &__block {
+        margin-bottom: 1em;
+
+        &>span {
+            display: block;
+            color: $clr-black;
+            text-decoration-line: underline;
+        }
+    }
+
+    &__autograph {
+        text-align: end;
+        margin-top: 1em;
+    }
+}
+
+@media (min-width:500px) {
+
+    .storytelling {
+
+        &__block {
+            columns: 300px 2;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+
+    .storytelling {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__img {
+            flex-basis: 50%;
+        }
+
+        &__text {
+            flex-basis: 45%;
+        }
+    }
+}
