@@ -527,7 +527,7 @@ img {
 .testimonial {
   color: rgb(255, 255, 255);
   font-weight: 300;
-  padding-block: 3em;
+  padding-top: 3em;
 }
 .testimonial > h3,
 .testimonial h4 {
@@ -541,8 +541,15 @@ img {
 }
 .testimonial__card {
   padding: 1em;
-  background-color: rgb(52, 57, 66);
+  background-color: rgba(52, 57, 66, 0.9);
   margin-bottom: 1em;
+}
+.testimonial__img {
+  background-image: url(./../assets/images/testimonial-img.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: calc(300px + 10vw);
 }
 
 .autor {
@@ -554,6 +561,7 @@ img {
 .autor__photo {
   position: relative;
   margin-right: 1em;
+  flex-shrink: 0;
 }
 .autor__photo::after {
   display: block;
@@ -567,10 +575,36 @@ img {
 }
 .autor__name > span {
   color: rgb(225, 177, 104);
+  display: inline-block;
+  line-height: 1.1;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 750px) {
+  .testimonial-bg {
+    position: relative;
+  }
   .testimonial__block {
+    position: absolute;
+    bottom: 1em;
     display: flex;
+    gap: 1em;
+    overflow: hidden;
+  }
+  .testimonial__card {
+    width: 500px;
+    flex-shrink: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .testimonial-bg {
+    position: static;
+  }
+  .testimonial__block {
+    position: static;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+  .testimonial__card {
+    flex-basis: 32%;
   }
 }

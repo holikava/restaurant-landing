@@ -1,7 +1,7 @@
 .testimonial {
     color: $clr-white;
     font-weight: $fw-light;
-    padding-block: 3em;
+    padding-top: 3em;
 
     &>h3,
     h4 {
@@ -19,8 +19,16 @@
 
     &__card {
         padding: 1em;
-        background-color: $clr-gray-darker;
+        background-color: rgba(52, 57, 66, 0.9);
         margin-bottom: 1em;
+    }
+
+    &__img {
+        background-image: url(./../assets/images/testimonial-img.jpg);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        height: calc(300px + 10vw);
     }
 }
 
@@ -33,6 +41,7 @@
     &__photo {
         position: relative;
         margin-right: 1em;
+        flex-shrink: 0;
 
         &::after {
             display: block;
@@ -48,6 +57,32 @@
 
     &__name > span {
         color: $clr-primary;
+        display: inline-block;
+        line-height: 1.1;
+        
+    }
+}
+
+@media (min-width: 750px) {
+    
+    .testimonial {
+
+        &-bg {
+            position: relative;
+        }
+
+        &__block {
+            position: absolute;
+            bottom: 1em;
+            display: flex;
+            gap: 1em;
+            overflow: hidden;
+        }
+
+        &__card {
+            width: 500px;
+            flex-shrink: 0;
+        }
     }
 }
 
@@ -55,8 +90,18 @@
     
     .testimonial {
 
+        &-bg {
+            position: static;
+        }
+
         &__block {
-            display: flex;
+            position: static;
+            justify-content: space-between;
+            margin-bottom: 1em;
+        }
+
+        &__card {
+            flex-basis: 32%;
         }
     }
 }
