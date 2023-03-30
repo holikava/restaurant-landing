@@ -33,8 +33,6 @@
     &>input[type="submit"] {
         text-align: center;
         color: $clr-black;
-        background-color: $clr-white;
-        cursor: pointer;
     }
 
     @media (min-width: 500px) {

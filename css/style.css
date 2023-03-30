@@ -253,6 +253,11 @@ input {
   outline-offset: -5px;
   background-color: #d3902a;
 }
+.btn--submit {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  outline: none;
+}
 
 .section-heading {
   margin-bottom: 2em;
@@ -794,7 +799,7 @@ input {
 }
 
 .blog {
-  padding-top: 3em;
+  padding-block: 3em;
 }
 @media (min-width: 750px) {
   .blog__preview {
@@ -874,8 +879,6 @@ input {
 .form > input[type=submit] {
   text-align: center;
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  cursor: pointer;
 }
 @media (min-width: 500px) {
   .form {
@@ -906,5 +909,79 @@ input {
   .form > input[type=submit] {
     grid-area: btn;
     max-width: 300px;
+  }
+}
+
+.subscribe {
+  max-width: 660px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-block: 3em;
+}
+.subscribe-bg {
+  background-color: rgb(41, 46, 54);
+}
+.subscribe__logo {
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.subscribe__text {
+  margin-bottom: 1em;
+}
+.subscribe__form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.subscribe__form > input[type=email] {
+  text-align: left;
+  color: inherit;
+  border: 1px solid rgb(133, 133, 133);
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.subscribe__form > input[type=submit] {
+  width: 100%;
+}
+@media (min-width: 750px) {
+  .subscribe__form {
+    flex-direction: row;
+    width: 80%;
+  }
+  .subscribe__form > input[type=email] {
+    flex: 1 0 70%;
+    margin-bottom: 0;
+  }
+}
+
+.footer {
+  color: rgb(255, 255, 255);
+  padding-block: 3em;
+}
+.footer-bg {
+  background-color: rgb(41, 46, 54);
+}
+.footer--color-text {
+  color: rgb(225, 177, 104);
+}
+.footer__links {
+  margin-block: 2em;
+}
+.footer__links-list {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 750px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__links {
+    margin-block: 0;
+    flex-basis: 30%;
+  }
+  .footer__worktime {
+    text-align: end;
   }
 }

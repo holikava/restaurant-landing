@@ -466,8 +466,8 @@
                         <button class="btn btn--color">View More</button>
                     </div>
                     <div class="section-heading preview__text">
-                        <span class="section-heading__title">Delicious</span
-                        ><span class="section-heading__title">March 19, 2022</span>
+                        <span class="section-heading__title">Delicious</span><span class="section-heading__title">March
+                            19, 2022</span>
                         <h2>The Legend of US Cuisine: The Story of Hungry People</h2>
                         <p>Capitalize on low-hanging fruit to identify a ballpark value added matrix economically and
                             the creative activity to beta test override the food quality.</p>
@@ -480,8 +480,8 @@
                         <button class="btn btn--color">View More</button>
                     </div>
                     <div class="section-heading preview__text">
-                        <span class="section-heading__title">Cooking</span
-                        ><span class="section-heading__title">March 19, 2022</span>
+                        <span class="section-heading__title">Cooking</span><span class="section-heading__title">March
+                            19, 2022</span>
                         <h2>The Most Popular Delicious Food of Mediterranean Cuisine</h2>
                         <p>Strategies on low-hanging fruit to identify a ballpark value added matrix economically and
                             the creative activity to beta test override the food quality.</p>
@@ -503,7 +503,7 @@
                     <input type="email" name="email" id="#" placeholder="Email">
                     <input type="number" name="number" id="#" min="1" max="50" step="1" placeholder="Persons">
                     <input type="date" name="date" id="#" placeholder="Date">
-                    <input type="submit" value="Book A Table">
+                    <input type="submit" value="Book A Table" class="btn btn--submit">
                 </form>
             </div>
         </div>
@@ -513,42 +513,41 @@
 
     <section class="subscribe-bg">
         <div class="container subscribe">
-            <img src="./assets/icons/logo.png" alt="logo">
-            <p>Join our mailing list for updates, Get news & offers events.</p>
+            <img src="./assets/icons/logo.png" alt="logo" class="subscribe__logo">
+            <p class="subscribe__text">Join our mailing list for updates, Get news & offers events.</p>
             <form action="#" class="subscribe__form">
-                <input type="email" name="email" id="#" placeholder="Email">
-                <input type="submit" value="Subscribe">
+                <input class="subscribe__email" type="email" name="email" id="#" placeholder="Email"><input
+                    type="submit" value="Subscribe" class="btn btn--submit subscribe__btn">
             </form>
         </div>
     </section>
 
 
 
-    <footer class="footer">
-        <div class="container">
-            <div class="contact">
+    <footer class="footer-bg">
+        <div class="container footer">
+            <div class="footer__contact">
                 <span class="section-heading__title">Contact</span>
-                <ul class="contact__list">
+                <ul class="footer__contact-list">
                     <li><a href="https://goo.gl/maps/LXrqbjUSoqokkDgF8">5 Rue Dalou, 75015 Paris</a></li>
-                    <li><a href="tel:+123456789">+123 456 789</a></li>
-                    <li><a href="mailto:josefin@mail.com">josefin@mail.com</a></li>
+                    <li><a class="footer--color-text" href="tel:+123456789">+123 456 789</a></li>
+                    <li><a class="footer--color-text" href="mailto:josefin@mail.com">josefin@mail.com</a></li>
                 </ul>
-                <ul class="contact__social-links social-links">
+            </div>
+            <div class="footer__links">
+                <ul class="footer__links-list social-links">
                     <li><a href="#"><img src="./assets/icons/instagram-icon.png" alt="instagram"></a></li>
                     <li><a href="#"><img src="./assets/icons/facebook-icon.png" alt="facebook"></a></li>
                     <li><a href="#"><img src="./assets/icons/twitter-icon.png" alt="twitter"></a></li>
                     <li><a href="#"><img src="./assets/icons/pinterest-icon.png" alt="pinterest"></a></li>
                 </ul>
             </div>
-            <div class="working-hours">
-                <span class="accent-title">Working hours</span>
-                <ul class="working-hours__list">
-                    <li><span class="working-hours__days">Mon - Fri:</span><span class="working-hours__times">7.00am -
-                            6.00pm</span></li>
-                    <li><span class="working-hours__days">Sat:</span><span class="working-hours__times">7.00am -
-                            6.00pm</span></li>
-                    <li><span class="working-hours__days">Sun:</span><span class="working-hours__times">8.00am -
-                            6.00pm</span></li>
+            <div class="footer__worktime">
+                <span class="section-heading__title">Working hours</span>
+                <ul class="footer__worktime-list">
+                    <li><span class="footer--color-text">Mon - Fri:</span><span> 7.00am - 6.00pm</span></li>
+                    <li><span class="footer--color-text">Sat:</span><span> 7.00am - 6.00pm</span></li>
+                    <li><span class="footer--color-text">Sun:</span><span> 8.00am - 6.00pm</span></li>
                 </ul>
             </div>
         </div>

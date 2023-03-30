@@ -29,6 +29,12 @@
             background-color: darken($clr-primary, 15%);
         }
     }
+
+    &--submit {
+        color: $clr-black;
+        background-color: $clr-white;
+        outline: none;
+    }
 }
 
 
