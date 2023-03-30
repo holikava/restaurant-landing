@@ -1,28 +1,80 @@
 .reservation {
+    text-align: center;
+    max-width: 920px;
     color: $clr-white;
     background-color: rgba(41, 46, 54, 0.9);
-    padding: 5em;
+    padding-block: 3em;
+    margin: 0 auto;
 
     &-bg {
         background-image: url(./../assets/images/reservation-bg-img.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 8em;
+        padding-block: 5em;
     }
 }
 
 .form {
     display: grid;
-    
-
-    &>legend {
-        margin-bottom: 1em;
-    }
+    grid-gap: 1em;
+    margin: 0 auto;
 
     &>input {
+        width: 80%;
+        max-width: 300px;
+        text-align: left;
         color: inherit;
         border: 1px solid $clr-gray;
         padding: 0.5em;
+        margin: 0 auto;
+    }
+
+    &>input[type="submit"] {
+        text-align: center;
+        color: $clr-black;
+        background-color: $clr-white;
+        cursor: pointer;
+    }
+
+    @media (min-width: 500px) {
+        & {
+            width: 70%;
+        }
+    }
+
+    @media (min-width: 750px) {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        grid-template-areas:
+            "legend legend"
+            "name email"
+            "persons date"
+            "btn btn";
+
+        &>legend {
+            grid-area: legend;
+            margin-bottom: 1em;
+        }
+
+        &>input[type="text"] {
+            grid-area: name;
+        }
+
+        &>input[type="email"] {
+            grid-area: email;
+        }
+
+        &>input[type="number"] {
+            grid-area: persons;
+        }
+
+        &>input[type="date"] {
+            grid-area: date;
+        }
+
+        &>input[type="submit"] {
+            grid-area: btn;
+            max-width: 300px;
+        }
     }
 }

@@ -842,26 +842,69 @@ input {
 }
 
 .reservation {
+  text-align: center;
+  max-width: 920px;
   color: rgb(255, 255, 255);
   background-color: rgba(41, 46, 54, 0.9);
-  padding: 5em;
+  padding-block: 3em;
+  margin: 0 auto;
 }
 .reservation-bg {
   background-image: url(./../assets/images/reservation-bg-img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 8em;
+  padding-block: 5em;
 }
 
 .form {
   display: grid;
-}
-.form > legend {
-  margin-bottom: 1em;
+  grid-gap: 1em;
+  margin: 0 auto;
 }
 .form > input {
+  width: 80%;
+  max-width: 300px;
+  text-align: left;
   color: inherit;
   border: 1px solid rgb(133, 133, 133);
   padding: 0.5em;
+  margin: 0 auto;
+}
+.form > input[type=submit] {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+@media (min-width: 500px) {
+  .form {
+    width: 70%;
+  }
+}
+@media (min-width: 750px) {
+  .form {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-areas: "legend legend" "name email" "persons date" "btn btn";
+  }
+  .form > legend {
+    grid-area: legend;
+    margin-bottom: 1em;
+  }
+  .form > input[type=text] {
+    grid-area: name;
+  }
+  .form > input[type=email] {
+    grid-area: email;
+  }
+  .form > input[type=number] {
+    grid-area: persons;
+  }
+  .form > input[type=date] {
+    grid-area: date;
+  }
+  .form > input[type=submit] {
+    grid-area: btn;
+    max-width: 300px;
+  }
 }
