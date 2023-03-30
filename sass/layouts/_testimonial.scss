@@ -36,6 +36,7 @@
     display: flex;
     align-items: center;
     border-bottom: 2px solid $clr-gray-dark;
+    padding-bottom: 1em;
     margin-bottom: 2em;
 
     &__photo {
@@ -55,16 +56,15 @@
         }
     }
 
-    &__name > span {
+    &__name>span {
         color: $clr-primary;
         display: inline-block;
         line-height: 1.1;
-        
     }
 }
 
 @media (min-width: 750px) {
-    
+
     .testimonial {
 
         &-bg {
@@ -87,7 +87,7 @@
 }
 
 @media (min-width: 1000px) {
-    
+
     .testimonial {
 
         &-bg {

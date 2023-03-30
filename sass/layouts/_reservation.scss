@@ -1,0 +1,28 @@
+.reservation {
+    color: $clr-white;
+    background-color: rgba(41, 46, 54, 0.9);
+    padding: 5em;
+
+    &-bg {
+        background-image: url(./../assets/images/reservation-bg-img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 8em;
+    }
+}
+
+.form {
+    display: grid;
+    
+
+    &>legend {
+        margin-bottom: 1em;
+    }
+
+    &>input {
+        color: inherit;
+        border: 1px solid $clr-gray;
+        padding: 0.5em;
+    }
+}

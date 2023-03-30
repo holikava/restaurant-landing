@@ -5,7 +5,7 @@
 @import 'base/colors';
 @import 'base/typography';
 @import 'base/basic';
-
+@import 'base/breakpoints';
 @import 'base/components';
 @import 'base/mixin';
 
@@ -15,3 +15,8 @@
 @import 'layouts/storytelling';
 @import 'layouts/menu';
 @import 'layouts/testimonial';
+@import 'layouts/offers';
+@import 'layouts/gallery';
+@import 'layouts/advantages';
+@import 'layouts/blog';
+@import 'layouts/reservation';

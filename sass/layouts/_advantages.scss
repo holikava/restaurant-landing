@@ -1,0 +1,67 @@
+.advantages {
+    color: $clr-white;
+    padding-block: 3em;
+
+    &-bg {
+        background-color: $clr-secondary;
+    }
+
+    &__heading>h2 {
+        color: inherit;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    &__card {
+        text-align: center;
+        padding: 2em;
+        border: 20px solid $clr-gray-darker;
+
+        &>img {
+            margin: 0 auto 0.5em;
+        }
+    }
+
+    @media (min-width: 500px) {
+
+        &__card {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    @media (min-width: 750px) {
+        
+        &__block {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__card {
+            flex: 0 0 30%;
+        }
+    }
+
+    @media (min-width: 1000px) {
+
+        & {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 2em;
+        }
+
+        &__heading {
+            flex-basis:  35%;
+            margin-bottom: 0;
+        }
+
+        &__block {
+            flex-basis: 60%;
+        }
+    }
+}

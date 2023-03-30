@@ -16,6 +16,10 @@
     &__btn {
         margin: 2em 0 3em;
     }
+
+    &__img > img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 500px) {
