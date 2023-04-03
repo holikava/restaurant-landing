@@ -1,8 +1,7 @@
 .information {
     display: grid;
-    gap: 2em;
-    grid-auto-flow: row;
-    padding-block: 3em;
+    gap: 1em;
+    padding-top: 3em;
 
     &-bg {
         background-color: $clr-pink-light;
@@ -14,9 +13,9 @@
         height: 83px;
         border-radius: 50%;
         background-color: $clr-secondary;
-        margin: 0 auto 0.7em;
+        margin: 0 auto 1em;
 
-        & > img {
+        &>img {
             margin: auto;
         }
     }
@@ -24,15 +23,44 @@
     &__block {
         text-align: center;
 
-        & > span {
+        &>span {
             font-weight: $fw-light;
         }
     }
-}
 
-@media (min-width: 750px) {
-    .information {
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
+    @include break($breakpoint-tablet-portrait) {
+        &__block {
+            text-align: start;
+            @include flex(row, start);
+        }
+
+        &__icon {
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        &__text {
+            margin-left: 1em;
+        }
+    }
+
+    @include break($breakpoint-tablet-landscape) {
+        & {
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+        }
+
+        &__block {
+            @include flex(column, flex-start);
+            text-align: center;
+        }
+
+        &__icon {
+            margin-bottom: 1em;
+        }
+
+        &__text {
+            margin: 0;
+        }
     }
 }
