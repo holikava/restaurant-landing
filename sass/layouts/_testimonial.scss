@@ -3,39 +3,59 @@
     font-weight: $fw-light;
     padding-top: 3em;
 
-    &>h3,
-    h4 {
-        color: inherit;
-    }
-
-    &__heading>h2 {
-        color: inherit;
-    }
-
     &-bg {
         background-color: $clr-secondary;
     }
 
-
     &__card {
         padding: 1em;
-        background-color: rgba(52, 57, 66, 0.9);
-        margin-bottom: 1em;
+        background-color: $clr-bg-opacity;
+        margin-bottom: 2em;
     }
 
     &__img {
+        content: "";
         background-image: url(./../assets/images/testimonial-img.jpg);
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
         height: calc(300px + 10vw);
     }
+
+    @include break($breakpoint-tablet-portrait) {
+
+        &__block {
+            @include flex(row, space-between, stretch);
+            flex-wrap: nowrap;
+            position: absolute;
+            overflow: hidden;
+            margin-top: 1.5em;
+
+            & > *+* {
+                margin-left: 1em;
+            }
+        }
+    
+        &__card {
+            flex-basis: 500px;
+            flex-shrink: 0;
+        }
+    }
+    
+    @include break($breakpoint-desktop) {
+        &__block {
+            position: static
+        }
+
+        &__card {
+            flex-basis: 31%;
+        }
+    }
 }
 
 .autor {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid $clr-gray-dark;
+    @include flex(row, flex-start);
+    border-bottom: $clr-border;
     padding-bottom: 1em;
     margin-bottom: 2em;
 
@@ -58,50 +78,6 @@
 
     &__name>span {
         color: $clr-primary;
-        display: inline-block;
         line-height: 1.1;
-    }
-}
-
-@media (min-width: 750px) {
-
-    .testimonial {
-
-        &-bg {
-            position: relative;
-        }
-
-        &__block {
-            position: absolute;
-            bottom: 1em;
-            display: flex;
-            gap: 1em;
-            overflow: hidden;
-        }
-
-        &__card {
-            width: 500px;
-            flex-shrink: 0;
-        }
-    }
-}
-
-@media (min-width: 1000px) {
-
-    .testimonial {
-
-        &-bg {
-            position: static;
-        }
-
-        &__block {
-            position: static;
-            justify-content: space-between;
-            margin-bottom: 1em;
-        }
-
-        &__card {
-            flex-basis: 32%;
-        }
     }
 }

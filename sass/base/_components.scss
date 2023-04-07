@@ -12,22 +12,11 @@
 
     &--border {
         color: $clr-primary;
-
-        &:hover {
-            color: $clr-black;
-            outline-offset: -5px;
-            background-color: darken($clr-primary, 15%);
-        }
     }
 
     &--color {
         color: $clr-black;
         background-color: $clr-primary;
-
-        &:hover {
-            outline-offset: -5px;
-            background-color: darken($clr-primary, 15%);
-        }
     }
 
     &--submit {
@@ -35,6 +24,15 @@
         background-color: $clr-white;
         outline: none;
     }
+
+    &--border:hover,
+    &--color:hover,
+    &--submit:hover {
+            color: $clr-white;
+            outline: 3px solid $clr-white;
+            outline-offset: -5px;
+            background-color: darken($clr-primary, 15%);
+        }
 }
 
 
