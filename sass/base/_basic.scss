@@ -11,6 +11,10 @@
     margin: 0;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: $ff-text;
     font-weight: $fw-normal;

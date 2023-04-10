@@ -16,7 +16,7 @@
 
 <body>
 
-    <header class="header-bg">
+    <header class="header-bg" id="header">
         <div class="container header">
             <div class="header__info info">
                 <div class="info__telefon">
@@ -26,27 +26,31 @@
                     <img src="./assets/icons/logo.png" alt="The Tasteat logo" class="logo-img">
                 </div>
                 <div class="info__btn">
-                    <button class="btn btn--color">Reservation</button>
+                    <a href="#reservation" class="btn btn--color">Reservation</a>
                 </div>
             </div>
 
             <div class="header__nav">
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li><a href="#" class="nav__link">Home</a></li>
-                        <li><a href="#" class="nav__link">About Us</a></li>
-                        <li><a href="#" class="nav__link">Our Menu</a></li>
-                        <li><a href="#" class="nav__link">Pages</a></li>
-                        <li><a href="#" class="nav__link">Blog</a></li>
-                        <li><a href="#" class="nav__link">Contact Us</a></li>
+                        <li><a href="#header" class="nav__link nav__link--active">Home</a></li>
+                        <li><a href="#storytelling" class="nav__link">About Us</a></li>
+                        <li><a href="#menu" class="nav__link">Our Menu</a></li>
+                        <li><a href="#offers" class="nav__link">Offers</a></li>
+                        <li><a href="#blog" class="nav__link">Blog</a></li>
+                        <li><a href="#footer" class="nav__link">Contact Us</a></li>
+                    </ul>
+                    <ul class="nav__social-list">
+                        <li><a href="#" class="nav__social-link"><img src="./assets/icons/instagram-icon.png"
+                                    alt="instagram"></a></li>
+                        <li><a href="#" class="nav__social-link"><img src="./assets/icons/facebook-icon.png"
+                                    alt="facebook"></a></li>
+                        <li><a href="#" class="nav__social-link"><img src="./assets/icons/twitter-icon.png"
+                                    alt="twitter"></a></li>
+                        <li><a href="#" class="nav__social-link"><img src="./assets/icons/pinterest-icon.png"
+                                    alt="pinterest"></a></li>
                     </ul>
                 </nav>
-                <ul class="social-links">
-                    <li><a href="#"><img src="./assets/icons/instagram-icon.png" alt="instagram"></a></li>
-                    <li><a href="#"><img src="./assets/icons/facebook-icon.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="./assets/icons/twitter-icon.png" alt="twitter"></a></li>
-                    <li><a href="#"><img src="./assets/icons/pinterest-icon.png" alt="pinterest"></a></li>
-                </ul>
             </div>
         </div>
     </header>
@@ -113,7 +117,7 @@
 
 
 
-    <section class="storytelling-bg">
+    <section class="storytelling-bg" id="storytelling">
         <div class="container storytelling">
             <div class="storytelling__img">
                 <img src="./assets/images/storytelling-img.jpg" alt="tables in restaurant">
@@ -140,7 +144,7 @@
 
 
 
-    <section class="menu-bg">
+    <section class="menu-bg" id="menu">
         <div class="container menu">
             <div class="menu__card">
                 <div class="section-heading menu__heading">
@@ -328,7 +332,7 @@
 
 
 
-    <section class="offers-bg">
+    <section class="offers-bg" id="offers">
         <div class="container offers">
             <div class="section-heading offers__heading">
                 <span class="section-heading__title">Offers</span>
@@ -473,7 +477,7 @@
     </section>
 
 
-    <section class="blog-bg">
+    <section class="blog-bg" id="blog">
         <div class="container blog">
             <div class="section-heading blog__heading">
                 <span class="section-heading__title">Blog</span>
@@ -482,12 +486,12 @@
             </div>
 
             <div class="blog__block">
-                <div class="blog__preview preview">
-                    <div class="preview__btn">
+                <div class="blog__preview">
+                    <div class="blog__btn">
                         <img src="./assets/images/blog-img-01.jpg" alt="pizza">
                         <button class="btn btn--color">View More</button>
                     </div>
-                    <div class="section-heading preview__text">
+                    <div class="section-heading blog__text">
                         <span class="section-heading__title">Delicious</span><span class="section-heading__title">March
                             19, 2022</span>
                         <h2>The Legend of US Cuisine: The Story of Hungry People</h2>
@@ -496,12 +500,12 @@
                     </div>
                 </div>
 
-                <div class="blog__preview preview">
-                    <div class="preview__btn">
+                <div class="blog__preview">
+                    <div class="blog__btn">
                         <img src="./assets/images/blog-img-02.jpg" alt="barbecue">
                         <button class="btn btn--color">View More</button>
                     </div>
-                    <div class="section-heading preview__text">
+                    <div class="section-heading blog__text">
                         <span class="section-heading__title">Cooking</span><span class="section-heading__title">March
                             19, 2022</span>
                         <h2>The Most Popular Delicious Food of Mediterranean Cuisine</h2>
@@ -515,7 +519,7 @@
 
 
 
-    <section class="reservation-bg">
+    <section class="reservation-bg" id="reservation">
         <div class="container">
             <div class="reservation">
                 <span class="section-heading__title">Reservation</span>
@@ -546,7 +550,7 @@
 
 
 
-    <footer class="footer-bg">
+    <footer class="footer-bg" id="footer">
         <div class="container footer">
             <div class="footer__contact">
                 <span class="section-heading__title">Contact</span>
