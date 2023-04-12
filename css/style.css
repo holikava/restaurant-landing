@@ -498,7 +498,6 @@ input {
 .storytelling__block > span {
   display: block;
   color: rgb(0, 0, 0);
-  text-decoration-line: underline;
 }
 .storytelling__autograph > img {
   margin-left: auto;
