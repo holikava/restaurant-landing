@@ -27,12 +27,15 @@
         &__block {
             @include flex(row, space-between, stretch);
             flex-wrap: nowrap;
-            position: absolute;
-            overflow: hidden;
-            margin-top: 1.5em;
 
             & > *+* {
                 margin-left: 1em;
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                height: 10px;
             }
         }
     
@@ -44,7 +47,7 @@
     
     @include break($breakpoint-desktop) {
         &__block {
-            position: static
+            position: static;
         }
 
         &__card {
@@ -55,9 +58,9 @@
 
 .autor {
     @include flex(row, flex-start);
-    border-bottom: $clr-border;
+    border-bottom: $border;
     padding-bottom: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
     &__photo {
         position: relative;

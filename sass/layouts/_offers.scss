@@ -1,6 +1,10 @@
 .offers {
     padding-block: 3em;
 
+    &__block {
+        color: $clr-white;
+    }
+
     &__deal {
         background-color: $clr-blue-light;
         padding: 2em;

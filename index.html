@@ -14,7 +14,7 @@
     <title>The Tasteat - restaurant for you</title>
 </head>
 
-<body>
+<body id="top-link">
 
     <header class="header-bg" id="header">
         <div class="container header">
@@ -31,9 +31,11 @@
             </div>
 
             <div class="header__nav">
-                <nav class="nav">
+                <button class="hamburger-menu-toggle"><span
+                        class="visually-hidden">Menu</span></button>
+                <nav class="nav" id="header-navigation">
                     <ul class="nav__list">
-                        <li><a href="#header" class="nav__link nav__link--active">Home</a></li>
+                        <li><a href="#header" class="nav__link">Home</a></li>
                         <li><a href="#storytelling" class="nav__link">About Us</a></li>
                         <li><a href="#menu" class="nav__link">Our Menu</a></li>
                         <li><a href="#offers" class="nav__link">Offers</a></li>
@@ -462,15 +464,15 @@
             <div class="advantages__block">
                 <div class="advantages__card">
                     <img src="./assets/icons/calendar-icon.png" alt="calendar">
-                    <span>Opened 24/7</span>
+                    <span>Opened </span><span>24/7</span>
                 </div>
                 <div class="advantages__card">
                     <img src="./assets/icons/menu-icon.png" alt="menu">
-                    <span>Special Menus</span>
+                    <span>Special </span><span>Menus</span>
                 </div>
                 <div class="advantages__card">
                     <img src="./assets/icons/delivery-icon.png" alt="delivery">
-                    <span>Home Delivery</span>
+                    <span>Home </span><span>Delivery</span>
                 </div>
             </div>
         </div>
@@ -542,7 +544,7 @@
             <img src="./assets/icons/logo.png" alt="logo" class="subscribe__logo">
             <p class="subscribe__text">Join our mailing list for updates, Get news & offers events.</p>
             <form action="#" class="subscribe__form">
-                <input class="subscribe__email" type="email" name="email" id="#" placeholder="Email"><input
+                <input class="subscribe__email" type="email" name="email" id="#" placeholder="Email" maxlength="30"><input
                     type="submit" value="Subscribe" class="btn btn--submit subscribe__btn">
             </form>
         </div>
@@ -577,9 +579,13 @@
                 </ul>
             </div>
         </div>
+
+        
+
     </footer>
 
 
+    <a href="#top-link" class="arrow-up"><img src="./assets/icons/top-link.png" alt="top arrow"></a>
 
 
 
@@ -597,8 +603,7 @@
 
 
 
-
-
+<script src="./script.js"></script>
 
 </body>
 

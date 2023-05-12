@@ -23,13 +23,21 @@
         margin: 0 auto;
     }
 
-    &__form>input[type="email"] {
-        width: 80%;
+    &__email {
+        width: 100%;
         text-align: left;
         color: inherit;
-        border: $clr-border;
+        border: $border;
         padding: 0.5em;
         margin-bottom: 1em;
+    }
+
+    &__btn {
+        border: 1px solid $clr-white;
+
+        &:hover {
+            border-color: darken($clr-primary, 15%);
+        }
     }
 
     @include break($breakpoint-tablet-landscape) {
@@ -37,8 +45,9 @@
             flex-direction: row;
         }
 
-        &__form>input[type="email"] {
-            flex: 1 0 70%;
+        &__email {
+            flex: 1 0 60%;
+            border-right: none;
             margin-bottom: 0;
         }
     }

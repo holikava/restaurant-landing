@@ -167,23 +167,19 @@ legend {
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   font-size: 1.25rem;
   color: rgb(41, 46, 54);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: "Cormorant Infant", serif;
   font-weight: 400;
   line-height: 1.1;
-  margin-top: 0;
   margin-bottom: 0.3em;
 }
 
@@ -234,15 +230,15 @@ input {
   font-size: 1.35rem;
   line-height: 1.4;
   border: none;
-  outline: 3px solid rgb(225, 177, 104);
   cursor: pointer;
   padding: 0.5em 0;
   width: calc(230px + 2vw);
   background-color: transparent;
-  transition: all 200ms ease-in;
+  transition: all 150ms ease-in-out;
 }
 .btn--border {
   color: rgb(225, 177, 104);
+  border: 3px solid rgb(225, 177, 104);
 }
 .btn--color {
   color: rgb(0, 0, 0);
@@ -251,13 +247,14 @@ input {
 .btn--submit {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
-  outline: none;
+  border: none;
 }
 .btn--border:hover, .btn--color:hover, .btn--submit:hover {
   color: rgb(255, 255, 255);
-  outline: 3px solid rgb(255, 255, 255);
-  outline-offset: -5px;
   background-color: #d3902a;
+}
+.btn--border:hover {
+  border-color: #d3902a;
 }
 
 .section-heading {
@@ -276,6 +273,19 @@ input {
   line-height: 1.3;
 }
 
+.arrow-up {
+  position: fixed;
+  bottom: 1.5em;
+  right: 1.5em;
+  opacity: 0.5;
+  background-color: rgb(220, 220, 220);
+  padding: 0.3em;
+  border-radius: 50%;
+}
+.arrow-up:hover {
+  opacity: 1;
+}
+
 .header {
   text-align: center;
 }
@@ -283,64 +293,7 @@ input {
   background-color: rgb(41, 46, 54);
 }
 .header__nav {
-  display: none;
   border-bottom: 1px solid rgb(133, 133, 133);
-}
-@media screen and (min-width: 900px) {
-  .header__nav {
-    display: block;
-  }
-}
-
-.nav__list {
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav__link {
-  padding-block: 1em;
-  transition: 200ms color ease-in;
-}
-.nav__link--active {
-  color: rgb(225, 177, 104);
-}
-.nav__link:hover {
-  color: rgb(225, 177, 104);
-}
-.nav__social-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  line-height: 1;
-}
-.nav__social-list > * + * {
-  margin-left: 1em;
-}
-@media screen and (min-width: 900px) {
-  .nav__social-list {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav__list {
-    flex-basis: 70%;
-  }
-  .nav__social-list {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
 
 .info {
@@ -374,6 +327,119 @@ input {
   }
 }
 
+@media screen and (max-width: 599px) {
+  .hamburger-menu-toggle {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1em;
+    background-color: transparent;
+    z-index: 10;
+    background-image: url(./../assets/icons/hamburger-menu-open.svg);
+    border: 1px solid rgb(225, 177, 104);
+  }
+  .toggle--close {
+    background-image: url(./../assets/icons/hamburger-menu-close.svg);
+    border-color: rgb(255, 255, 255);
+  }
+  .nav {
+    display: none;
+    color: rgb(255, 255, 255);
+  }
+  .nav__list {
+    margin-bottom: 1em;
+  }
+  .nav__list > * + * {
+    margin-top: 0.5em;
+  }
+  .nav__link {
+    padding: 0.5em;
+    transition: all ease-out 100ms;
+  }
+  .nav__link:hover {
+    color: rgb(225, 177, 104);
+  }
+  .nav__social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 0.5em;
+  }
+  .nav__social-link {
+    padding: 0.5em;
+  }
+  .nav--open {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 1em;
+    background-color: rgb(41, 46, 54);
+    text-align: center;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .hamburger-menu-toggle {
+    display: none;
+  }
+  .nav {
+    color: rgb(255, 255, 255);
+    margin-bottom: 1em;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .nav__link {
+    padding-block: 1em;
+  }
+  .nav__link:hover {
+    color: rgb(225, 177, 104);
+  }
+  .nav__social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav__social-list > * + * {
+    margin-left: 1em;
+  }
+  .nav__social-link {
+    vertical-align: middle;
+  }
+}
+@media screen and (min-width: 900px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  .nav__list {
+    flex-basis: 70%;
+  }
+}
 .hero {
   text-align: center;
   color: rgb(255, 255, 255);
@@ -533,8 +599,11 @@ input {
 .menu__gallery > * + * {
   margin-top: 2em;
 }
+.menu__category {
+  text-align: center;
+}
 .menu__category > * + * {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 @media screen and (min-width: 900px) {
   .menu {
@@ -542,6 +611,9 @@ input {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+  }
+  .menu__category {
+    text-align: start;
   }
   .menu__card {
     flex-basis: 40%;
@@ -552,20 +624,25 @@ input {
 }
 
 .item {
+  text-align: center;
   line-height: 1.1;
 }
 .item__img {
   max-width: 84px;
-  margin-bottom: 0.5em;
+  margin: 0 auto;
+}
+.item__title > h4 {
+  color: rgb(0, 0, 0);
+  border-bottom: 2px dotted rgb(133, 133, 133);
 }
 .item__title > p {
-  color: rgb(92, 97, 104);
+  color: rgb(52, 57, 66);
 }
 .item__price {
   font-family: "Cormorant Infant", serif;
   font-weight: 600;
   font-size: 1.2em;
-  color: rgb(52, 57, 66);
+  color: rgb(0, 0, 0);
 }
 @media screen and (min-width: 600px) {
   .item {
@@ -573,6 +650,7 @@ input {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    text-align: start;
   }
   .item__img {
     margin-bottom: 0;
@@ -583,8 +661,11 @@ input {
     padding-right: 2em;
     margin-left: 1em;
   }
+  .item__title > h4 {
+    border-bottom: none;
+  }
   .item__title > p {
-    border-bottom: 2px dotted rgb(52, 57, 66);
+    border-bottom: 2px dotted rgb(133, 133, 133);
   }
   .item__price {
     position: absolute;
@@ -603,7 +684,7 @@ input {
 }
 .testimonial__card {
   padding: 1em;
-  background-color: rgba(52, 57, 66, 0.9);
+  background-color: rgba(52, 57, 66, 0.85);
   margin-bottom: 2em;
 }
 .testimonial__img {
@@ -621,12 +702,14 @@ input {
     justify-content: space-between;
     align-items: stretch;
     flex-wrap: nowrap;
-    position: absolute;
-    overflow: hidden;
-    margin-top: 1.5em;
   }
   .testimonial__block > * + * {
     margin-left: 1em;
+  }
+  .testimonial__block::after {
+    display: block;
+    content: "";
+    height: 10px;
   }
   .testimonial__card {
     flex-basis: 500px;
@@ -649,7 +732,7 @@ input {
   align-items: center;
   border-bottom: 1px solid rgb(133, 133, 133);
   padding-bottom: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .autor__photo {
   position: relative;
@@ -674,8 +757,11 @@ input {
 .offers {
   padding-block: 3em;
 }
+.offers__block {
+  color: rgb(255, 255, 255);
+}
 .offers__deal {
-  background-color: rgb(130, 180, 180);
+  background-color: rgb(45, 159, 159);
   padding: 2em;
   margin-bottom: 1em;
 }
@@ -756,6 +842,7 @@ input {
 }
 .gallery__title {
   position: relative;
+  color: rgb(0, 0, 0);
   padding-right: 2em;
   border-bottom: 1px solid rgb(133, 133, 133);
 }
@@ -765,6 +852,9 @@ input {
   right: 0;
   font-family: "Cormorant Infant", serif;
   font-weight: 600;
+}
+.gallery__text > P {
+  color: rgb(52, 57, 66);
 }
 .gallery__btn {
   text-align: center;
@@ -835,6 +925,9 @@ input {
     margin: 0;
     flex-basis: 30%;
   }
+  .advantages__card > span {
+    display: block;
+  }
 }
 @media screen and (min-width: 1200px) {
   .advantages {
@@ -902,8 +995,8 @@ input {
 .reservation {
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgba(52, 57, 66, 0.9);
-  padding: 3em;
+  background-color: rgba(52, 57, 66, 0.85);
+  padding: 5em 3em;
   margin: 0 auto;
 }
 .reservation-bg {
@@ -938,6 +1031,7 @@ input {
 }
 .form > input[type=submit] {
   text-align: center;
+  border: none;
 }
 @media screen and (min-width: 900px) {
   .form {
@@ -990,20 +1084,27 @@ input {
   width: 70%;
   margin: 0 auto;
 }
-.subscribe__form > input[type=email] {
-  width: 80%;
+.subscribe__email {
+  width: 100%;
   text-align: left;
   color: inherit;
   border: 1px solid rgb(133, 133, 133);
   padding: 0.5em;
   margin-bottom: 1em;
 }
+.subscribe__btn {
+  border: 1px solid rgb(255, 255, 255);
+}
+.subscribe__btn:hover {
+  border-color: #d3902a;
+}
 @media screen and (min-width: 900px) {
   .subscribe__form {
     flex-direction: row;
   }
-  .subscribe__form > input[type=email] {
-    flex: 1 0 70%;
+  .subscribe__email {
+    flex: 1 0 60%;
+    border-right: none;
     margin-bottom: 0;
   }
 }

@@ -12,17 +12,25 @@
     &__gallery {
         margin-top: 3em;
 
-        & >*+* {
+        &>*+* {
             margin-top: 2em;
         }
     }
 
-    &__category > *+* {
-        margin-top: 1em;
+    &__category {
+        text-align: center;
+
+        &>*+* {
+            margin-top: 1.5em;
+        }
     }
 
     @include break($breakpoint-tablet-landscape) {
         @include flex(row, space-between, flex-start);
+
+        &__category {
+            text-align: start;
+        }
 
         &__card {
             flex-basis: 40%;
@@ -35,14 +43,20 @@
 }
 
 .item {
+    text-align: center;
     line-height: 1.1;
 
     &__img {
         max-width: 84px;
-        margin-bottom: 0.5em;
+        margin: 0 auto;
     }
 
-    &__title > p {
+    &__title>h4 {
+        color: $clr-black;
+        border-bottom: 2px dotted $clr-border;
+    }
+
+    &__title>p {
         color: $clr-gray-dark;
     }
 
@@ -50,11 +64,12 @@
         font-family: $ff-title;
         font-weight: $fw-bold;
         font-size: 1.2em;
-        color: $clr-gray-darker
+        color: $clr-black;
     }
 
     @include break($breakpoint-tablet-portrait) {
         @include flex(row, flex-start);
+        text-align: start;
 
         &__img {
             margin-bottom: 0;
@@ -66,8 +81,12 @@
             padding-right: 2em;
             margin-left: 1em;
 
+            & > h4 {
+                border-bottom: none;
+            }
+
             &>p {
-                border-bottom: 2px dotted $clr-gray-darker;
+                border-bottom: 2px dotted $clr-border;
             }
         }
 

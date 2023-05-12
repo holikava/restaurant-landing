@@ -2,7 +2,7 @@
     text-align: center;
     color: $clr-white;
     background-color: $clr-bg-opacity;
-    padding: 3em;
+    padding: 5em 3em;
     margin: 0 auto;
 
     &-bg {
@@ -30,13 +30,14 @@
     &>input {
         width: 90%;
         text-align: left;
-        border: $clr-border;
+        border: $border;
         padding: 0.5em;
         margin: 0 auto;
     }
 
     &>input[type="submit"] {
         text-align: center;
+        border: none;
     }
 
     @include break($breakpoint-tablet-landscape) {

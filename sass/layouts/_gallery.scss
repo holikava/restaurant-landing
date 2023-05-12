@@ -23,8 +23,9 @@
 
     &__title {
         position: relative;
+        color: $clr-black;
         padding-right: 2em;
-        border-bottom: $clr-border;
+        border-bottom: $border;
 
         &>span {
             position: absolute;
@@ -33,6 +34,10 @@
             font-family: $ff-title;
             font-weight: $fw-bold;
         }
+    }
+
+    &__text > P {
+        color: $clr-gray-dark;
     }
 
     &__btn {

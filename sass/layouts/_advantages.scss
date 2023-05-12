@@ -10,7 +10,7 @@
         max-width: 450px;
         text-align: center;
         padding: 2em;
-        border: 20px solid $clr-gray-darker;
+        border: 20px solid $clr-gray-dark;
         margin: 0 auto 1em;
 
         &>img {
@@ -27,7 +27,11 @@
 
         &__card {
             margin: 0;
-            flex-basis: 30%
+            flex-basis: 30%;
+
+            & > span {
+                display: block;
+            }
         }
     }
 
