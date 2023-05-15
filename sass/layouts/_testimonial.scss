@@ -22,36 +22,10 @@
         height: calc(300px + 10vw);
     }
 
-    @include break($breakpoint-tablet-portrait) {
-
+    @media screen and (min-width: $breakpoint-desktop) {
         &__block {
             @include flex(row, space-between, stretch);
-            flex-wrap: nowrap;
-
-            & > *+* {
-                margin-left: 1em;
-            }
-
-            &::after {
-                display: block;
-                content: "";
-                height: 10px;
-            }
-        }
-    
-        &__card {
-            flex-basis: 500px;
-            flex-shrink: 0;
-        }
-    }
-    
-    @include break($breakpoint-desktop) {
-        &__block {
-            position: static;
-        }
-
-        &__card {
-            flex-basis: 31%;
+            gap: 1em;
         }
     }
 }

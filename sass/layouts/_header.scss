@@ -76,10 +76,12 @@
 
         &__link {
             padding: 0.5em;
-            transition: all ease-out 100ms;
+            transition: all ease-out 250ms;
 
             &:hover {
                 color: $clr-primary;
+                padding-bottom: 0;
+                border-bottom: 1px solid $clr-primary;
             }
         }
 
