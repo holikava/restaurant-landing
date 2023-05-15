@@ -2,11 +2,21 @@
     padding-block: 3em;
 
     &__preview {
+        border: $border;
         margin-bottom: 1em;
+    }
+
+    &__text {
+        padding: 1em;
+
+        & > span+span {
+            margin-left: 1em;
+        }
     }
 
     &__btn {
         position: relative;
+        margin-bottom: 1em;
 
         &::after {
             display: block;
@@ -31,23 +41,15 @@
         }
     }
 
-    &__text {
-        border: $border;
-        border-top: none;
-        padding: 1.5em;
-        margin-bottom: 0;
-        
-
-        &>span+span {
-            margin-left: 1em;
-        }
-    }
 
     @include break($breakpoint-tablet-landscape) {
-
         &__block {
             @include flex(row, space-between, stretch);
             gap: 1em;
+        }
+
+        &__preview {
+            margin-bottom: 0;
         }
     }
 }

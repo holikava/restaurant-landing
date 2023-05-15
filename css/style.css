@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Document
    ========================================================================== */
 /**
@@ -279,13 +280,98 @@ input {
   right: 1.5em;
   opacity: 0.5;
   background-color: rgb(220, 220, 220);
-  padding: 0.3em;
+  padding: 0.2em;
   border-radius: 50%;
 }
 .arrow-up:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+@media screen and (max-width: 1199px) {
+  .itc-slider {
+    position: relative;
+  }
+  .itc-slider-wrapper {
+    overflow: hidden;
+    margin: 0 3em;
+  }
+  .itc-slider-items {
+    display: flex;
+    transition: transform 500ms ease;
+    will-change: transform;
+  }
+  .itc-slider-transition-none {
+    transition: none;
+  }
+  .itc-slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    will-change: transform;
+  }
+  /* кнопки влево и вправо */
+  .itc-slider-btn {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    background: rgba(52, 57, 66, 0.85);
+    border: none;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .itc-slider-btn-prev {
+    left: 0;
+  }
+  .itc-slider-btn-next {
+    right: 0;
+  }
+  .itc-slider-btn:hover,
+  .itc-slider-btn:focus {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.3);
+    outline: 0;
+  }
+  .itc-slider-btn::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+  }
+  .itc-slider-btn-prev::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+  .itc-slider-btn-next::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+}
+@media (min-width: 1200px) {
+  .itc-slider-btn {
+    display: none;
+  }
+  .itc-slider-item {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
 .header {
   text-align: center;
 }
@@ -356,10 +442,12 @@ input {
   }
   .nav__link {
     padding: 0.5em;
-    transition: all ease-out 100ms;
+    transition: all ease-out 250ms;
   }
   .nav__link:hover {
     color: rgb(225, 177, 104);
+    padding-bottom: 0;
+    border-bottom: 1px solid rgb(225, 177, 104);
   }
   .nav__social-list {
     display: flex;
@@ -640,7 +728,6 @@ input {
 }
 .item__price {
   font-family: "Cormorant Infant", serif;
-  font-weight: 600;
   font-size: 1.2em;
   color: rgb(0, 0, 0);
 }
@@ -695,33 +782,13 @@ input {
   background-repeat: no-repeat;
   height: calc(300px + 10vw);
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
   .testimonial__block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    flex-wrap: nowrap;
-  }
-  .testimonial__block > * + * {
-    margin-left: 1em;
-  }
-  .testimonial__block::after {
-    display: block;
-    content: "";
-    height: 10px;
-  }
-  .testimonial__card {
-    flex-basis: 500px;
-    flex-shrink: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .testimonial__block {
-    position: static;
-  }
-  .testimonial__card {
-    flex-basis: 31%;
+    gap: 1em;
   }
 }
 
@@ -949,10 +1016,18 @@ input {
   padding-block: 3em;
 }
 .blog__preview {
+  border: 1px solid rgb(133, 133, 133);
   margin-bottom: 1em;
+}
+.blog__text {
+  padding: 1em;
+}
+.blog__text > span + span {
+  margin-left: 1em;
 }
 .blog__btn {
   position: relative;
+  margin-bottom: 1em;
 }
 .blog__btn::after {
   display: block;
@@ -973,15 +1048,6 @@ input {
   transform: translateX(-50%);
   z-index: 10;
 }
-.blog__text {
-  border: 1px solid rgb(133, 133, 133);
-  border-top: none;
-  padding: 1.5em;
-  margin-bottom: 0;
-}
-.blog__text > span + span {
-  margin-left: 1em;
-}
 @media screen and (min-width: 900px) {
   .blog__block {
     display: flex;
@@ -989,6 +1055,9 @@ input {
     justify-content: space-between;
     align-items: stretch;
     gap: 1em;
+  }
+  .blog__preview {
+    margin-bottom: 0;
   }
 }
 
