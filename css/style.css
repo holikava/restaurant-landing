@@ -413,6 +413,7 @@ input {
   }
 }
 
+/* *****hamburger-menu******* */
 @media screen and (max-width: 599px) {
   .hamburger-menu-toggle {
     position: absolute;
@@ -470,6 +471,7 @@ input {
     text-align: center;
   }
 }
+/* *****hamburger-menu end******* */
 .visually-hidden {
   position: absolute;
   width: 1px;
