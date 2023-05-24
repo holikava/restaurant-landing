@@ -87,12 +87,13 @@
   }
 }
 
-@media (min-width: $breakpoint-desktop) {
-    .itc-slider-btn {
-        display: none;
-    }
 
-    .itc-slider-item {
-        transform: translate3d(0, 0, 0) !important; // display all cards for big screens without slider 
-    }
+@media (min-width: 1200px) {
+  .itc-slider-btn {
+      display: none;
+  }
+
+  .itc-slider-item {
+      transform: translate3d(0, 0, 0) !important; // display all cards for big screens without slider 
+  }
 }
