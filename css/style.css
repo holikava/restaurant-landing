@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Document
    ========================================================================== */
 /**
@@ -287,132 +286,6 @@ input {
   opacity: 0.9;
 }
 
-/**
- * ItcSlider
- * @version 1.0.1
- * @author https://github.com/itchief
- * @copyright Alexander Maltsev 2020 - 2023
- * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
- * @tutorial https://itchief.ru/javascript/slider
- */
-@media screen and (max-width: 599px) {
-  .itc-slider-btn {
-    display: none;
-  }
-  .itc-slider-item {
-    transform: translate3d(0, 0, 0) !important;
-  }
-}
-@media (min-width: 600px) and (max-width: 1199px) {
-  .itc-slider {
-    position: relative;
-  }
-  .itc-slider-wrapper {
-    overflow: hidden;
-    margin: 0 3em;
-  }
-  .itc-slider-items {
-    display: flex;
-    transition: transform 0.5s ease;
-    will-change: transform;
-  }
-  .itc-slider-transition-none {
-    transition: none;
-  }
-  .itc-slider-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    will-change: transform;
-  }
-  /* кнопки влево и вправо */
-  .itc-slider-btn {
-    position: absolute;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    color: #fff;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.2);
-    border: none;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  .itc-slider-btn-hide {
-    display: none;
-  }
-  .itc-slider-btn-prev {
-    left: 0;
-  }
-  .itc-slider-btn-next {
-    right: 0;
-  }
-  .itc-slider-btn:hover,
-  .itc-slider-btn:focus {
-    color: #fff;
-    text-decoration: none;
-    background: rgba(0, 0, 0, 0.3);
-    outline: 0;
-  }
-  .itc-slider-btn::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: transparent no-repeat center center;
-    background-size: 100% 100%;
-  }
-  .itc-slider-btn-prev::before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-  }
-  .itc-slider-btn-next::before {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-  }
-  /* индикаторы */
-  .itc-slider-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    margin: 0 15%;
-    padding-left: 0;
-    list-style: none;
-  }
-  .itc-slider-indicator {
-    flex: 0 1 auto;
-    box-sizing: content-box;
-    width: 30px;
-    height: 5px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    background-color: rgba(255, 255, 255, 0.5);
-    background-clip: padding-box;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    cursor: pointer;
-  }
-  .itc-slider-indicator-active {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-}
-@media (min-width: 1200px) {
-  .itc-slider-btn {
-    display: none;
-  }
-  .itc-slider-item {
-    transform: translate3d(0, 0, 0) !important;
-  }
-}
 .header {
   text-align: center;
 }
@@ -488,8 +361,6 @@ input {
   }
   .nav__link:hover {
     color: rgb(225, 177, 104);
-    padding-bottom: 0;
-    border-bottom: 1px solid rgb(225, 177, 104);
   }
   .nav__social-list {
     display: flex;
@@ -812,10 +683,15 @@ input {
 .testimonial-bg {
   background-color: rgb(41, 46, 54);
 }
+.testimonial__block {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .testimonial__card {
-  padding: 1em;
+  flex-basis: 100%;
+  padding: 2em 1em;
   background-color: rgba(52, 57, 66, 0.85);
-  margin-bottom: 2em;
+  margin: 0 auto;
 }
 .testimonial__img {
   content: "";
@@ -824,6 +700,51 @@ input {
   background-position: center top;
   background-repeat: no-repeat;
   height: calc(300px + 10vw);
+}
+.testimonial__btns > button {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
+  transition: all 200ms ease-in-out;
+}
+.testimonial__btns > button:hover {
+  color: rgb(225, 177, 104);
+}
+@media screen and (max-width: 899px) {
+  .testimonial__block {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 55vh;
+    margin: 0 auto 2rem;
+  }
+  .testimonial__card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .testimonial__btns {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .testimonial__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1em;
+    margin-bottom: 2rem;
+  }
+  .testimonial__btns {
+    display: none;
+  }
 }
 @media screen and (min-width: 1200px) {
   .testimonial__block {
